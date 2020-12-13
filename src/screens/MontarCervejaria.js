@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 import { Context as ProfileContext } from '../context/ProfileContext';
 import { withRouter } from 'react-router-dom';
 import PaperContainer from '../components/PaperContainer';
-import { NavLink } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import TextInput from '../components/TextInput';
 import Grid from '@material-ui/core/Grid';
@@ -34,7 +33,6 @@ const MontarCervejaria = (props) => {
 						fullWidth
 						required
 						type="name"
-						required
 						value={name}
 						onChange={(e) => setName(e.target.value)}
 						inputProps={{ style: { color: '#6b362c', zIndex: 10 } }}

@@ -6,7 +6,6 @@ import pgame from '../assets/strategy-game.png';
 import sgame from '../assets/quiz.png';
 import tgame from '../assets/ask-question.png';
 import Box from '@material-ui/core/Box';
-import { borders } from '@material-ui/system';
 
 const Games = () => {
 	return (
