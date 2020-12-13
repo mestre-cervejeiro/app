@@ -30,7 +30,8 @@ const saveUser = (dispatch) => {
 		// 		name,
 		// 		state,
 		// 		age,
-		// 		gender
+		// 		gender,
+		//		education
 		// 	});
 		// 	console.log(response);
 		// } catch (err) {

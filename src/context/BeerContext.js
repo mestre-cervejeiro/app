@@ -25,18 +25,18 @@ const beerReducer = (state, action) => {
 
 const getBeers = (dispatch) => {
 	return async () => {
-		console.log('get beer');
-		// const response = await brewApi.get('/beers');
+		console.log('ranking');
+		// const response = await brewApi.get('/ranking');
 		// dispatch({ type: 'get_beers', payload: response.data });
 	};
 };
 
 const addBeer = (dispatch) => {
-	return async ({ estilo, fruta, aroma, amargor }) => {
+	return async ({ estilo, fruta, aroma, amargor, time, challenge }) => {
 		console.log('add cerveja');
-		const beer = { estilo, fruta, aroma, amargor };
+		const beer = { estilo, fruta, aroma, amargor, time, challenge };
 		dispatch({ type: 'add_beer', payload: beer });
-		// await jsonServer.post('/beers', { title, content });
+		// await jsonServer.post('/createbeer', { title, content });
 		// dispatch({ type: "add_beerpost", payload: { title, content } });
 	};
 };
@@ -46,7 +46,9 @@ export const { Context, Provider } = createDataContext(beerReducer, { addBeer, g
 		id: 1,
 		estilo: 'Stout',
 		fruta: 'amora',
-		aroma: 'forte',
-		amargor: 'fraco'
+		aroma: 3,
+		amargor: 1,
+		time: 'Ale',
+		challenge: 1
 	}
 ]);
