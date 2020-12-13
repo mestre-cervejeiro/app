@@ -1,19 +1,22 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
 	container: {
 		display: 'flex',
 		flexDirection: 'column',
-		height: '100vh',
+		height: '857px',
 		justifyContent: 'center',
 		alignItems: 'center',
-		maxWidth: '500px'
+		width: '480px',
+		maxWidth: '100%',
+		borderRadius: 10,
+		background: 'linear-gradient(0deg, #EDC988 0%, #a05344 100%)'
 	},
 	paper: {
-		background: 'linear-gradient(0deg, #EDC988 0%, #a05344 100%)',
-
-		padding: 40,
+		padding: '2em',
 		color: 'white',
 		justifyContent: 'center',
 		textAlign: 'center',
@@ -24,10 +27,14 @@ const useStyles = makeStyles({
 const PaperContainer = ({ children }) => {
 	const classes = useStyles();
 	return (
-		<div style={{ justifyContent: 'center', width: '100vw', display: 'flex' }}>
-			<div className={classes.container}>
-				<div className={classes.paper}>{children}</div>
-			</div>
+		<div
+			style={{ justifyContent: 'center', alignItems: 'center', width: '100vw', height: '100vh', display: 'flex' }}
+		>
+			<Paper className={classes.container}>
+				<Box overflow="auto" className={classes.paper}>
+					<div className={classes.paper}>{children}</div>
+				</Box>
+			</Paper>
 		</div>
 	);
 };
