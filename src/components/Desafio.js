@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { NavLink } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import target from '../assets/target.svg';
@@ -20,10 +20,11 @@ const Desafio = () => {
 				<Typography variant="h4">Desafio da semana</Typography>
 				<Grid item style={{ marginTop: 30 }}>
 					<img style={{ width: '15em', margin: '1em' }} src={target} alt="logo" />
-
-					<ButtonFilled style={{ margin: 30 }}>
-						<Typography variant="body2">Crie uma cerveja para uma senhora de 80 anos</Typography>
-					</ButtonFilled>
+					<NavLink to="/montarcerveja">
+						<ButtonFilled style={{ margin: 30 }}>
+							<Typography variant="body2">Crie uma cerveja para uma senhora de 80 anos</Typography>
+						</ButtonFilled>
+					</NavLink>
 				</Grid>
 			</Grid>
 		</div>

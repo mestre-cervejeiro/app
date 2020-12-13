@@ -27,9 +27,16 @@ const Cervejaria = () => {
 					<Typography variant="body1">Para liberar mais, vote nas cervejas dos amigos</Typography>
 				</Grid>
 				<Grid item style={{ margin: '1em' }}>
-					<img style={{ width: '5em', margin: '0.3em' }} src={icon} alt="logo" />
-					<img style={{ width: '5em', margin: '0.3em' }} src={icon} alt="logo" />
-					<img style={{ width: '5em', margin: '0.3em' }} src={icon} alt="logo" />
+					<NavLink to="/yourbeer">
+						<img style={{ width: '5em', margin: '0.3em' }} src={icon} alt="logo" />
+					</NavLink>
+					<NavLink to="/yourbeer">
+						<img style={{ width: '5em', margin: '0.3em' }} src={icon} alt="logo" />
+					</NavLink>
+					<NavLink to="/yourbeer">
+						<img style={{ width: '5em', margin: '0.3em' }} src={icon} alt="logo" />
+					</NavLink>
+
 					<NavLink to="/montarcerveja">
 						<img style={{ width: '5em', opacity: '0.7', margin: '0.3em' }} src={icon} alt="logo" />
 					</NavLink>

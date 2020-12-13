@@ -12,7 +12,8 @@ const MontarCervejaria = () => {
 	return (
 		<PaperContainer>
 			<Typography variant="h4">Parabéns, você criou uma cerveja totalmente com a sua cara!</Typography>
-			<Grid container style={{ marginTop: 50, width: '100%' }}>
+			<Typography variant="body1">1000 votos</Typography>
+			<Grid container style={{ width: '100%' }}>
 				<Grid xs={12} style={{ marginTop: 50 }} item>
 					<img style={{ width: '90%', margin: '1em' }} src={beer} alt="logo" />
 					<Typography variant="h5" style={{ color: ' #6b362c' }}>
