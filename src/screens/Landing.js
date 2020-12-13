@@ -19,7 +19,7 @@ const Landing = () => {
 	const classes = useStyles();
 	return (
 		<PaperContainer>
-			<Typography variant="h3">Parabéns, você acaba de se tornar Mestre Cervejeiro!</Typography>
+			<Typography variant="h4">Parabéns, você acaba de se tornar Mestre Cervejeiro!</Typography>
 			<img src={cheers} alt="logo" className={classes.image} />
 			<div style={{ marginBottom: '2em' }}>
 				<NavLink to="/completeprofile" style={{ textDecoration: 'none' }}>

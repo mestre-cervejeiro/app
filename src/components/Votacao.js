@@ -26,7 +26,7 @@ const Votação = () => {
 					<img style={{ width: '6em', margin: '1em' }} src={beer} alt="logo" />
 				</Grid>
 				<Divider
-					style={{ width: 3, backgroundColor: '#a05344', marginTop: '2em' }}
+					style={{ width: 3, backgroundColor: '#a05344', marginTop: '1.5em' }}
 					orientation="vertical"
 					flexItem
 				/>

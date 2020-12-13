@@ -22,7 +22,7 @@ const Desafio = () => {
 					<img style={{ width: '15em', margin: '1em' }} src={target} alt="logo" />
 
 					<ButtonFilled style={{ margin: 30 }}>
-						<Typography variant="h5">Crie uma cerveja para uma senhora de 80 anos</Typography>
+						<Typography variant="body2">Crie uma cerveja para uma senhora de 80 anos</Typography>
 					</ButtonFilled>
 				</Grid>
 			</Grid>

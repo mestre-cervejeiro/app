@@ -25,6 +25,7 @@ const useStyles = makeStyles({
 	paper: {
 		background: 'linear-gradient(0deg, #EDC988 0%, #a05344 100%)',
 		padding: 20,
+		paddingTop: '2em',
 		color: 'white',
 		justifyContent: 'center',
 		textAlign: 'center',

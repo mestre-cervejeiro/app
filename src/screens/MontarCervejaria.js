@@ -12,7 +12,7 @@ const MontarCervejaria = () => {
 
 	return (
 		<PaperContainer>
-			<Typography variant="h3">Agora decida como será a SUA cervejaria</Typography>
+			<Typography variant="h4">Agora decida como será a SUA cervejaria</Typography>
 			<Grid container style={{ marginTop: 50 }}>
 				<Grid style={{ marginTop: 20 }} item xs={12}>
 					<Typography variant="h5" style={{ color: ' #6b362c' }}>
@@ -36,12 +36,12 @@ const MontarCervejaria = () => {
 					</Typography>
 					<NavLink to="/dashboard" style={{ textDecoration: 'none' }}>
 						<ButtonFilled style={{ margin: 30 }}>
-							<Typography variant="h4">ALE</Typography>
+							<Typography variant="h5">ALE</Typography>
 						</ButtonFilled>
 					</NavLink>
 					<NavLink to="/dashboard" style={{ textDecoration: 'none' }}>
 						<ButtonFilled style={{ margin: 30 }}>
-							<Typography variant="h4">LAGER</Typography>
+							<Typography variant="h5">LAGER</Typography>
 						</ButtonFilled>
 					</NavLink>
 				</Grid>

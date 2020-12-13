@@ -21,13 +21,13 @@ const Cervejaria = () => {
 					<Typography variant="body1">Para liberar mais, vote nas cervejas dos amigos</Typography>
 				</Grid>
 				<Grid item>
-					<img style={{ width: '5em', margin: '1em' }} src={icon} alt="logo" />
-					<img style={{ width: '5em', margin: '1em' }} src={icon} alt="logo" />
-					<img style={{ width: '5em', margin: '1em' }} src={icon} alt="logo" />
-					<img style={{ width: '5em', opacity: '0.7', margin: '1em' }} src={icon} alt="logo" />
-					<img style={{ width: '5em', opacity: '0.4', margin: '1em' }} src={icon} alt="logo" />
-					<img style={{ width: '5em', opacity: '0.4', margin: '1em' }} src={icon} alt="logo" />
-					<img style={{ width: '5em', opacity: '0.4', margin: '1em' }} src={icon} alt="logo" />
+					<img style={{ width: '4.5em', margin: '0.3em' }} src={icon} alt="logo" />
+					<img style={{ width: '4.5em', margin: '0.3em' }} src={icon} alt="logo" />
+					<img style={{ width: '4.5em', margin: '0.3em' }} src={icon} alt="logo" />
+					<img style={{ width: '4.5em', opacity: '0.7', margin: '0.3em' }} src={icon} alt="logo" />
+					<img style={{ width: '4.5em', opacity: '0.4', margin: '0.3em' }} src={icon} alt="logo" />
+					<img style={{ width: '4.5em', opacity: '0.4', margin: '0.3em' }} src={icon} alt="logo" />
+					<img style={{ width: '4.5em', opacity: '0.4', margin: '0.3em' }} src={icon} alt="logo" />
 				</Grid>
 			</Grid>
 			<Typography bottom={0} style={{ color: '#a05344' }} variant="h4">
