@@ -16,7 +16,7 @@ const CompleteProfile = () => {
 		<PaperContainer>
 			<Typography variant="h4">Complete o seu perfil para ganhar a primeira cerveja</Typography>
 			<Grid container style={{ marginTop: 50 }}>
-				<Grid style={{ marginTop: 20 }} item xs={12}>
+				<Grid style={{ marginTop: 15 }} item xs={12}>
 					<Typography variant="h5" style={{ color: ' #6b362c' }}>
 						Nome completo
 					</Typography>
