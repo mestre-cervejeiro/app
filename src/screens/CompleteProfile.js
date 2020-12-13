@@ -80,7 +80,7 @@ const CompleteProfile = (props) => {
 							type="text"
 							value={education}
 							onChange={(e) => setEducation(e.target.value)}
-							inputProps={{ style: { color: 'white' } }}
+							inputProps={{ style: { color: '#6b362c', zIndex: 10 } }}
 						/>
 					</Grid>
 					<Grid style={{ marginTop: 20 }} item xs={12}>
