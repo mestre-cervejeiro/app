@@ -14,6 +14,11 @@ require('typeface-abeezee');
 const theme = createMuiTheme({
 	typography: {
 		fontFamily: 'ABeeZee'
+	},
+	palette: {
+		primary: {
+			main: '#a05344'
+		}
 	}
 });
 
