@@ -11,6 +11,7 @@ import Cervejaria from '../components/Cervejaria';
 import Desafio from '../components/Desafio';
 import Votacao from '../components/Votacao';
 import Ranking from '../components/Ranking';
+import Tutorial from '../components/Tutorial';
 import Box from '@material-ui/core/Box';
 import SearchIcon from '@material-ui/icons/Search';
 
@@ -85,7 +86,7 @@ const DashboardContainer = ({ children }) => {
 						<Ranking />
 					</TabPanel>
 					<TabPanel value={value} index={4}>
-						<Cervejaria />
+						<Tutorial />
 					</TabPanel>
 				</div>
 				<BottomNavigation
