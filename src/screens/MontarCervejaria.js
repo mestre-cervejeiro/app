@@ -32,6 +32,7 @@ const MontarCervejaria = (props) => {
 					<TextInput
 						variant="outlined"
 						fullWidth
+						required
 						type="name"
 						required
 						value={name}

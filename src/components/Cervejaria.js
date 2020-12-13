@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import icon from '../assets/beer-icon.svg';
 import avatar from '../assets/avatar.svg';
 import { Context as ProfileContext } from '../context/ProfileContext';
+import { NavLink } from 'react-router-dom';
 
 const Cervejaria = () => {
 	const { state: { name, breweryName, family } } = useContext(ProfileContext);
@@ -29,7 +30,9 @@ const Cervejaria = () => {
 					<img style={{ width: '4.5em', margin: '0.3em' }} src={icon} alt="logo" />
 					<img style={{ width: '4.5em', margin: '0.3em' }} src={icon} alt="logo" />
 					<img style={{ width: '4.5em', margin: '0.3em' }} src={icon} alt="logo" />
-					<img style={{ width: '4.5em', opacity: '0.7', margin: '0.3em' }} src={icon} alt="logo" />
+					<NavLink to="/montarcerveja">
+						<img style={{ width: '4.5em', opacity: '0.7', margin: '0.3em' }} src={icon} alt="logo" />
+					</NavLink>
 					<img style={{ width: '4.5em', opacity: '0.4', margin: '0.3em' }} src={icon} alt="logo" />
 					<img style={{ width: '4.5em', opacity: '0.4', margin: '0.3em' }} src={icon} alt="logo" />
 					<img style={{ width: '4.5em', opacity: '0.4', margin: '0.3em' }} src={icon} alt="logo" />

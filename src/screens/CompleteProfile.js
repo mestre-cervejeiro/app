@@ -36,6 +36,7 @@ const CompleteProfile = (props) => {
 						<TextInput
 							variant="outlined"
 							fullWidth
+							required
 							type="name"
 							value={name}
 							onChange={(e) => setName(e.target.value)}
