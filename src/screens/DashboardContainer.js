@@ -11,22 +11,24 @@ import Cervejaria from '../components/Cervejaria';
 import Desafio from '../components/Desafio';
 import Votacao from '../components/Votacao';
 import Box from '@material-ui/core/Box';
+import Paper from '@material-ui/core/Paper';
+
 import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles({
 	container: {
 		display: 'flex',
 		flexDirection: 'column',
-		height: '100vh',
+		height: '857px',
 		justifyContent: 'center',
 		alignItems: 'center',
-		width: '500px',
-		maxWidth: '100vw'
+		width: '480px',
+		maxWidth: '100%',
+		borderRadius: 10,
+		background: 'linear-gradient(0deg, #EDC988 0%, #a05344 100%)'
 	},
 	paper: {
-		background: 'linear-gradient(0deg, #EDC988 0%, #a05344 100%)',
-		padding: 20,
-		paddingTop: '2em',
+		padding: '2em',
 		color: 'white',
 		justifyContent: 'center',
 		textAlign: 'center',
@@ -63,14 +65,16 @@ function a11yProps(index) {
 	};
 }
 
-const DashboardContainer = ({ children }) => {
+const DashboardContainer = () => {
 	const classes = useStyles();
 	const [ value, setValue ] = useState(0);
 
 	return (
-		<div style={{ justifyContent: 'center', width: '100vw', display: 'flex' }}>
-			<div className={classes.container}>
-				<div className={classes.paper}>
+		<div
+			style={{ justifyContent: 'center', alignItems: 'center', width: '100vw', height: '100vh', display: 'flex' }}
+		>
+			<Paper elevation={3} className={classes.container}>
+				<Box overflow="auto" className={classes.paper}>
 					<TabPanel style={{ height: '100%' }} value={value} index={0}>
 						<Cervejaria />
 					</TabPanel>
@@ -86,9 +90,14 @@ const DashboardContainer = ({ children }) => {
 					<TabPanel value={value} index={4}>
 						<Cervejaria />
 					</TabPanel>
-				</div>
+				</Box>
 				<BottomNavigation
-					style={{ width: '100%', height: 100, backgroundColor: '#a05344' }}
+					style={{
+						width: '480px',
+						maxWidth: '100%',
+						height: 100,
+						backgroundColor: '#a05344'
+					}}
 					value={value}
 					onChange={(event, newValue) => {
 						setValue(newValue);
@@ -126,7 +135,7 @@ const DashboardContainer = ({ children }) => {
 						icon={<SearchIcon />}
 					/>
 				</BottomNavigation>
-			</div>
+			</Paper>
 		</div>
 	);
 };
