@@ -4,6 +4,7 @@ import Landing from './screens/Landing';
 import DashboardContainer from './screens/DashboardContainer';
 import CompleteProfile from './screens/CompleteProfile';
 import MontarCervejaria from './screens/MontarCervejaria';
+import MontarCerveja from './screens/MontarCerveja';
 import './App.css';
 require('typeface-abeezee');
 
@@ -22,6 +23,7 @@ const App = () => {
 					<Route path="/dashboard" exact component={DashboardContainer} />
 					<Route path="/completeprofile" exact component={CompleteProfile} />
 					<Route path="/montarcervejaria" exact component={MontarCervejaria} />
+					<Route path="/montarcerveja" exact component={MontarCerveja} />
 				</Switch>
 			</Router>
 		</ThemeProvider>

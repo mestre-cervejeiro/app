@@ -5,7 +5,7 @@ const TextInput = withStyles({
 	root: {
 		'& fieldset': {
 			borderRadius: 25,
-			backgroundColor: 'white'
+			// backgroundColor: 'white'
 		},
 
 		'& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
