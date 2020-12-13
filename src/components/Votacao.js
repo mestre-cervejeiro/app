@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import beer from '../assets/beer.svg';
@@ -7,10 +7,8 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 import Divider from '@material-ui/core/Divider';
-const useStyles = makeStyles({});
 
 const Votação = () => {
-	const classes = useStyles();
 	return (
 		<div>
 			<Typography variant="h4">Qual a melhor cerveja para o desafio?</Typography>
@@ -25,7 +23,7 @@ const Votação = () => {
 					>
 						IPA de framboesa
 					</Typography>
-					<img style={{ width: '6em', margin: '1em' }} src={beer} alt="logo" className={classes.image} />
+					<img style={{ width: '6em', margin: '1em' }} src={beer} alt="logo" />
 				</Grid>
 				<Divider
 					style={{ width: 3, backgroundColor: '#a05344', marginTop: '2em' }}
@@ -44,7 +42,7 @@ const Votação = () => {
 					}}
 				>
 					<Typography variant="h5">Stout de café</Typography>
-					<img style={{ width: '6em', margin: '1em' }} src={beer} alt="logo" className={classes.image} />
+					<img style={{ width: '6em', margin: '1em' }} src={beer} alt="logo" />
 					<ArrowForwardIosIcon style={{ fontSize: '5em' }} />
 				</Grid>
 			</Grid>

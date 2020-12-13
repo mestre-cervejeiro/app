@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import PaperContainer from '../components/PaperContainer';
 import { NavLink } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
@@ -7,20 +6,12 @@ import TextInput from '../components/TextInput';
 import Grid from '@material-ui/core/Grid';
 import ButtonFilled from '../components/ButtonFilled';
 
-const useStyles = makeStyles({
-	image: {
-		width: '100%',
-		marginTop: '3em',
-		marginBottom: '3em'
-	}
-});
-
 const CompleteProfile = () => {
 	const [ name, setName ] = useState('');
 	const [ state, setState ] = useState('');
 	const [ age, setAge ] = useState('');
 	const [ gender, setGender ] = useState('');
-	const classes = useStyles();
+
 	return (
 		<PaperContainer>
 			<Typography variant="h3">Complete o seu perfil para ganhar a primeira cerveja</Typography>
