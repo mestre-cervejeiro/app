@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import beer from '../assets/beer.svg';
 import { NavLink } from 'react-router-dom';
 import PaperContainer from '../components/PaperContainer';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import ButtonFilled from '../components/ButtonFilled';
+import { Context as BeerContext } from '../context/BeerContext';
 
 const MontarCervejaria = () => {
+	const { state } = useContext(BeerContext);
 	return (
 		<PaperContainer>
 			<Typography variant="h4">Parabéns, você criou uma cerveja totalmente com a sua cara!</Typography>
@@ -14,7 +16,8 @@ const MontarCervejaria = () => {
 				<Grid xs={12} style={{ marginTop: 50 }} item xs={12}>
 					<img style={{ width: '90%', margin: '1em' }} src={beer} alt="logo" />
 					<Typography variant="h5" style={{ color: ' #6b362c' }}>
-						Essa é a sua cerveja! <br />Cerveja Stout com 5% de álcool aroma de abacaxi
+						Essa é a sua cerveja! <br />Cerveja {state[0].estilo} com {state[0].fruta}, aroma{' '}
+						{state[0].aroma} e amargor {state[0].amargor}
 					</Typography>
 				</Grid>
 				<Grid item xs={12} style={{ justifyContent: 'center', marginTop: 20 }}>

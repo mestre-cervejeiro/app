@@ -1,5 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
 	container: {
@@ -28,9 +30,11 @@ const PaperContainer = ({ children }) => {
 		<div
 			style={{ justifyContent: 'center', alignItems: 'center', width: '100vw', height: '100vh', display: 'flex' }}
 		>
-			<div className={classes.container}>
-				<div className={classes.paper}>{children}</div>
-			</div>
+			<Paper className={classes.container}>
+				<Box overflow="auto" className={classes.paper}>
+					<div className={classes.paper}>{children}</div>
+				</Box>
+			</Paper>
 		</div>
 	);
 };

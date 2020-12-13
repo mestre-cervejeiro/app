@@ -7,7 +7,7 @@ const ButtonFilled = styled(Button)({
 	borderRadius: '10px',
 	color: 'white',
 
-	padding: '25px',
+	padding: '15px',
 	fontWeight: 'bold'
 });
 

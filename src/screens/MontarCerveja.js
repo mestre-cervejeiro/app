@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { withRouter } from 'react-router-dom';
 import PaperContainer from '../components/PaperContainer';
 import Typography from '@material-ui/core/Typography';
@@ -7,13 +7,13 @@ import Selector from '../components/Selector';
 import Grid from '@material-ui/core/Grid';
 import ButtonFilled from '../components/ButtonFilled';
 import { makeStyles } from '@material-ui/core/styles';
+import { Context as BeerContext } from '../context/BeerContext';
 
 const useStyles = makeStyles({
 	btn: {
 		display: 'flex',
 		flexDirection: 'row',
 		flexWrap: 'wrap',
-		width: '500px',
 		justifyContent: 'space-between'
 	},
 	item: {
@@ -41,7 +41,7 @@ const MontarCerveja = (props) => {
 		}
 	];
 
-	const estilo = [
+	const estilos = [
 		{
 			value: 'Trigo',
 			label: 'Trigo'
@@ -81,13 +81,20 @@ const MontarCerveja = (props) => {
 	];
 
 	const [ fruta, setFrutas ] = useState('Siriguela');
-	const [ estilos, setEstilo ] = useState('');
+	const [ estilo, setEstilo ] = useState('');
 	const [ amargor, setAmargor ] = useState(2);
-	const [ aroma, setAroma ] = useState('');
+	const [ aroma, setAroma ] = useState(2);
+	const { addBeer } = useContext(BeerContext);
 	const classes = useStyles();
 	const handleSubmit = async () => {
-		console.log(estilos, fruta, amargor, aroma);
+		addBeer({ fruta, estilo, aroma, amargor });
 		props.history.push('/yourbeer');
+	};
+	const handleAmargorChange = (event, newValue) => {
+		setAmargor(newValue);
+	};
+	const handleAromaChange = (event, newValue) => {
+		setAroma(newValue);
 	};
 	return (
 		<PaperContainer>
@@ -98,20 +105,19 @@ const MontarCerveja = (props) => {
 					handleSubmit();
 				}}
 			>
-				<Grid container style={{ marginTop: 50 }}>
+				<Grid container>
 					<Grid style={{ marginTop: 20 }} item xs={12}>
-						<Typography variant="h5" style={{ color: ' #6b362c' }}>
+						<Typography variant="h5" style={{ color: 'white' }}>
 							1. O primeiro passo é escolher o estilo. Ele determina a intensidade
 						</Typography>
 						<Grid className={classes.btn}>
-							{estilo.map((option) => (
+							{estilos.map((option) => (
 								<ButtonFilled
 									className={classes.item}
 									key={option.value}
 									value={option.value}
-									radio
-									onChange={(e) => {
-										console.log(e.target.value);
+									onClick={() => {
+										setEstilo(option.value);
 									}}
 								>
 									{option.label}
@@ -127,7 +133,7 @@ const MontarCerveja = (props) => {
 						<TextInput
 							id="frutas"
 							select
-							label="Fruta"
+							fullWidth
 							value={fruta}
 							onChange={(e) => {
 								setFrutas(e.target.value);
@@ -137,7 +143,7 @@ const MontarCerveja = (props) => {
 								native: true
 							}}
 							variant="outlined"
-							inputProps={{ style: { width: '450px', color: '#6b362c', zIndex: 10 } }}
+							inputProps={{ style: { color: '#6b362c', zIndex: 10 } }}
 						>
 							{frutas.map((option) => (
 								<option key={option.value} value={option.value}>
@@ -150,37 +156,19 @@ const MontarCerveja = (props) => {
 						<Typography variant="h5" style={{ color: ' #6b362c' }}>
 							3. Você escolheu a Pale Ale. Agora escolha a quantidade de lúpulo, ele determina o amargor
 						</Typography>
-						<Selector
-							value={amargor}
-							min={1}
-							step={1}
-							max={3}
-							onChange={(e) => {
-								setAmargor(e.target.value);
-								console.log(e.target.value);
-							}}
-							valueLabelDisplay="auto"
-							aria-labelledby="non-linear-slider"
-						/>
+						<Selector value={amargor} min={1} step={1} marks max={3} onChange={handleAmargorChange} />
 					</Grid>
 					<Grid style={{ marginTop: 50 }} item xs={12}>
 						<Typography variant="h5" style={{ color: ' #6b362c' }}>
 							4. O lúpulo também é responsável pelo aroma. Qual o nível de aroma você prefere?
 						</Typography>
-						<Selector
-							value={aroma}
-							min={1}
-							step={1}
-							max={3}
-							onChange={(e) => {
-								setAroma(e.target.value);
-								console.log(e.target.value);
-							}}
-						/>
+						<Selector marks value={aroma} min={1} step={1} max={3} onChange={handleAromaChange} />
 					</Grid>
-					<ButtonFilled style={{ margin: 'auto' }} type="submit">
-						Submit
-					</ButtonFilled>
+					<Grid item style={{ width: '100%', marginTop: 20 }}>
+						<ButtonFilled style={{ marginBottom: 30 }} type="submit">
+							Salvar
+						</ButtonFilled>
+					</Grid>
 				</Grid>
 			</form>
 		</PaperContainer>
