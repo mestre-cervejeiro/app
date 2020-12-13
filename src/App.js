@@ -1,3 +1,4 @@
+import { Provider as ProfileProvider } from './context/ProfileContext';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Landing from './screens/Landing';
@@ -15,16 +16,18 @@ const theme = createMuiTheme({
 
 const App = () => {
 	return (
-		<ThemeProvider theme={theme}>
-			<Router>
-				<Switch>
-					<Route path="/" exact component={Landing} />
-					<Route path="/dashboard" exact component={DashboardContainer} />
-					<Route path="/completeprofile" exact component={CompleteProfile} />
-					<Route path="/montarcervejaria" exact component={MontarCervejaria} />
-				</Switch>
-			</Router>
-		</ThemeProvider>
+		<ProfileProvider>
+			<ThemeProvider theme={theme}>
+				<Router>
+					<Switch>
+						<Route path="/" exact component={Landing} />
+						<Route path="/dashboard" exact component={DashboardContainer} />
+						<Route path="/completeprofile" exact component={CompleteProfile} />
+						<Route path="/montarcervejaria" exact component={MontarCervejaria} />
+					</Switch>
+				</Router>
+			</ThemeProvider>
+		</ProfileProvider>
 	);
 };
 
