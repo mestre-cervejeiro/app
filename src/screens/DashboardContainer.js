@@ -11,10 +11,10 @@ import Cervejaria from '../components/Cervejaria';
 import Desafio from '../components/Desafio';
 import Votacao from '../components/Votacao';
 import Ranking from '../components/Ranking';
+import Games from '../components/Games';
 import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
-
-import SearchIcon from '@material-ui/icons/Search';
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 
 const useStyles = makeStyles({
 	container: {
@@ -89,7 +89,7 @@ const DashboardContainer = () => {
 						<Ranking />
 					</TabPanel>
 					<TabPanel value={value} index={4}>
-						<Cervejaria />
+						<Games />
 					</TabPanel>
 				</Box>
 				<BottomNavigation
@@ -132,8 +132,8 @@ const DashboardContainer = () => {
 					<BottomNavigationAction
 						{...a11yProps(4)}
 						style={{ color: 'white' }}
-						label="Tutorial"
-						icon={<SearchIcon />}
+						label="Ganhe Pontos"
+						icon={<SportsEsportsIcon />}
 					/>
 				</BottomNavigation>
 			</Paper>

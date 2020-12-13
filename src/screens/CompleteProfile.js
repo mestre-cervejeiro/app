@@ -13,6 +13,7 @@ const CompleteProfile = (props) => {
 	const [ state, setState ] = useState('');
 	const [ age, setAge ] = useState('');
 	const [ gender, setGender ] = useState('');
+	const [ education, setEducation ] = useState('');
 
 	const handleSubmit = async () => {
 		saveUser({ name, state, age, gender });
@@ -37,7 +38,7 @@ const CompleteProfile = (props) => {
 							variant="outlined"
 							fullWidth
 							required
-							type="name"
+							type="text"
 							value={name}
 							onChange={(e) => setName(e.target.value)}
 							inputProps={{ style: { color: '#6b362c', zIndex: 10 } }}
@@ -50,7 +51,7 @@ const CompleteProfile = (props) => {
 						<TextInput
 							variant="outlined"
 							fullWidth
-							type="state"
+							type="text"
 							value={state}
 							onChange={(e) => setState(e.target.value)}
 							inputProps={{ style: { color: '#6b362c', zIndex: 10 } }}
@@ -71,12 +72,25 @@ const CompleteProfile = (props) => {
 					</Grid>
 					<Grid style={{ marginTop: 20 }} item xs={12}>
 						<Typography variant="h5" style={{ color: ' #6b362c' }}>
+							Educação
+						</Typography>
+						<TextInput
+							variant="outlined"
+							fullWidth
+							type="text"
+							value={education}
+							onChange={(e) => setEducation(e.target.value)}
+							inputProps={{ style: { color: 'white' } }}
+						/>
+					</Grid>
+					<Grid style={{ marginTop: 20 }} item xs={12}>
+						<Typography variant="h5" style={{ color: ' #6b362c' }}>
 							Sexo
 						</Typography>
 						<TextInput
 							variant="outlined"
 							fullWidth
-							type="gender"
+							type="text"
 							value={gender}
 							onChange={(e) => setGender(e.target.value)}
 							inputProps={{ style: { color: '#6b362c', zIndex: 10 } }}
