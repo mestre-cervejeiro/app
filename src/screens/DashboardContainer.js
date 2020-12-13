@@ -10,6 +10,7 @@ import FormatListNumberedIcon from '@material-ui/icons/FormatListNumbered';
 import Cervejaria from '../components/Cervejaria';
 import Desafio from '../components/Desafio';
 import Votacao from '../components/Votacao';
+import Ranking from '../components/Ranking';
 import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
 
@@ -85,7 +86,7 @@ const DashboardContainer = () => {
 						<Votacao />
 					</TabPanel>
 					<TabPanel value={value} index={3}>
-						<Cervejaria />
+						<Ranking />
 					</TabPanel>
 					<TabPanel value={value} index={4}>
 						<Cervejaria />
