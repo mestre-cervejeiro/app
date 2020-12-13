@@ -24,14 +24,14 @@ const Landing = () => {
 			<div style={{ marginBottom: '2em' }}>
 				<NavLink to="/completeprofile" style={{ textDecoration: 'none' }}>
 					<ButtonFilled>
-						<FacebookIcon style={{ fontSize: 50 }} />
+						<FacebookIcon style={{ fontSize: 40 }} />
 					</ButtonFilled>
 				</NavLink>
 			</div>
 			<div style={{ marginBottom: '2em' }}>
 				<NavLink to="/completeprofile" style={{ textDecoration: 'none' }}>
 					<ButtonFilled>
-						<i className="fab fa-google" style={{ fontSize: 50 }} />
+						<i className="fab fa-google" style={{ fontSize: 40 }} />
 					</ButtonFilled>
 				</NavLink>
 			</div>

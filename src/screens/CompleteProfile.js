@@ -76,7 +76,7 @@ const CompleteProfile = () => {
 						inputProps={{ style: { color: 'white' } }}
 					/>
 				</Grid>
-				<Grid style={{ marginTop: 50 }} item xs={12}>
+				<Grid style={{ marginTop: 40 }} item xs={12}>
 					<NavLink to="/montarcervejaria" style={{ textDecoration: 'none' }}>
 						<ButtonFilled>
 							<Typography variant="body1">SALVAR</Typography>

@@ -15,12 +15,12 @@ const Cervejaria = () => {
 				<Grid item xs={6}>
 					<img style={{ width: '6em', margin: '1em' }} src={avatar} alt="logo" />
 				</Grid>
-				<Grid item style={{ marginTop: 30 }}>
+				<Grid item style={{ marginTop: 20 }}>
 					<Typography variant="h5">Essas são as cervejas:</Typography>
 					<Typography variant="body1">Você liberou mais uma cerveja! Clique nela para configurar</Typography>
 					<Typography variant="body1">Para liberar mais, vote nas cervejas dos amigos</Typography>
 				</Grid>
-				<Grid item>
+				<Grid item style={{ margin: '1em' }}>
 					<img style={{ width: '4.5em', margin: '0.3em' }} src={icon} alt="logo" />
 					<img style={{ width: '4.5em', margin: '0.3em' }} src={icon} alt="logo" />
 					<img style={{ width: '4.5em', margin: '0.3em' }} src={icon} alt="logo" />
@@ -30,7 +30,7 @@ const Cervejaria = () => {
 					<img style={{ width: '4.5em', opacity: '0.4', margin: '0.3em' }} src={icon} alt="logo" />
 				</Grid>
 			</Grid>
-			<Typography bottom={0} style={{ color: '#a05344' }} variant="h4">
+			<Typography bottom={0} style={{ color: '#a05344' }} variant="h5">
 				Cervejaria A Mais Gostosa
 			</Typography>
 		</div>

@@ -35,12 +35,12 @@ const MontarCervejaria = () => {
 						Qual a sua cerveja preferida? Essa vai ser sua família.
 					</Typography>
 					<NavLink to="/dashboard" style={{ textDecoration: 'none' }}>
-						<ButtonFilled style={{ margin: 30 }}>
+						<ButtonFilled style={{ margin: 20 }}>
 							<Typography variant="h5">ALE</Typography>
 						</ButtonFilled>
 					</NavLink>
 					<NavLink to="/dashboard" style={{ textDecoration: 'none' }}>
-						<ButtonFilled style={{ margin: 30 }}>
+						<ButtonFilled style={{ margin: 20 }}>
 							<Typography variant="h5">LAGER</Typography>
 						</ButtonFilled>
 					</NavLink>
