@@ -63,6 +63,21 @@ const CompleteProfile = () => {
 				</Grid>
 				<Grid style={{ marginTop: 20 }} item xs={12}>
 					<Typography variant="h5" style={{ color: ' #6b362c' }}>
+						Educação
+					</Typography>
+					<TextInput
+						variant="outlined"
+						fullWidth
+						type="educação"
+						required
+						value={age}
+						onChange={(e) => setAge(e.target.value)}
+						label="Educação"
+						inputProps={{ style: { color: 'white' } }}
+					/>
+				</Grid>
+				<Grid style={{ marginTop: 20 }} item xs={12}>
+					<Typography variant="h5" style={{ color: ' #6b362c' }}>
 						Sexo
 					</Typography>
 					<TextInput
