@@ -20,7 +20,8 @@ const useStyles = makeStyles({
 		height: '100vh',
 		justifyContent: 'center',
 		alignItems: 'center',
-		maxWidth: '500px'
+		width: '500px',
+		maxWidth: '100vw'
 	},
 	paper: {
 		background: 'linear-gradient(0deg, #EDC988 0%, #a05344 100%)',
