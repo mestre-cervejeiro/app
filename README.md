@@ -1,15 +1,20 @@
-# Getting Started with Create React App
+# Mestre Cervejeiro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto foi criado com [Create React App](https://github.com/facebook/create-react-app).
+
+
 
 ## Available Scripts
 
-In the project directory, you can run:
+Faça um Git Clone e comece com
+
+### `yarn install`
+
+Depois rode
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Vai abrir a aplicação no [http://localhost:3000](http://localhost:3000).
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
