@@ -12,7 +12,7 @@ const Votação = () => {
 	return (
 		<div>
 			<Typography variant="h4">Qual a melhor cerveja para o desafio?</Typography>
-			<Grid style={{ marginTop: '3em' }} alignItems="center" directio="row" container justify="center">
+			<Grid style={{ marginTop: '2em' }} alignItems="center" directio="row" container justify="center">
 				<Grid item xs={5}>
 					<ArrowBackIosIcon style={{ marginTop: '2em', fontSize: '5em' }} />
 					<Typography
