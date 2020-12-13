@@ -6,18 +6,20 @@ Esse projeto foi criado com [Create React App](https://github.com/facebook/creat
 
 ## Available Scripts
 
-Faça um Git Clone e comece com
+Git Clone https://github.com/mestre-cervejeiro/app
+
+Instalar 
 
 ### `yarn install`
 
-Depois rode
+Rodar no localhost
 
 ### `yarn start`
 
 Vai abrir a aplicação no [http://localhost:3000](http://localhost:3000).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Página irá fazer um reload toda vez que uma edição é feita.\
+
 
 ### `yarn test`
 
